@@ -1,0 +1,13 @@
+type Drink = 
+ record {
+   description: opt text;
+   id: nat;
+   ingredients: vec text;
+   name: text;
+   price: float64;
+ };
+service : {
+  getBartenderStatus: () -> (text) query;
+  getDrinkMenu: () -> (vec Drink) query;
+  orderDrink: (nat) -> (text);
+}
